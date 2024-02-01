@@ -1,18 +1,16 @@
 class Solution {
 public:
-    string defangIPaddr(string address) {
-        int index=0;
-        string ans;
-        while(index<address.size())
-        {
-            if(address[index]=='.'){
-                ans+="[.]";
-            }
-            else{
-                ans+=address[index];
-            }
-            index++;
+    bool checkIfPangram(string sentence) {
+        vector<bool>alpha(26,0);
+
+        for(int i=0;i<sentence.size();i++){
+            alpha[sentence[i]-'a']=1;
         }
-        return ans;
+        for(int i=0;i<26;i++){
+            if(alpha[i]==0){
+                return 0;
+            }
+        }
+        return 1;
     }
 };
