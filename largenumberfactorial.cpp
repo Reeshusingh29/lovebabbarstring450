@@ -19,3 +19,12 @@ vector<int> factorial(int N){
         reverse(ans.begin(),ans.end());
         return ans;
     }
+int main(){
+    int n=8;
+    vector<int> ans = factorial(n);
+    for(int i = 0; i < ans.size(); i++) {
+        cout << ans[i];
+    }
+    cout << endl;
+    return 0;
+}
