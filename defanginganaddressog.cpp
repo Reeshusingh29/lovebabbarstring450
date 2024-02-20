@@ -7,7 +7,7 @@ public:
         {
             if(address[index]=='.'){
                 ans+="[.]";
-            }
+            } 
             else{
                 ans+=address[index];
             }
